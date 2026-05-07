@@ -1,5 +1,20 @@
 import os
 
+def load_data():
+    print("Current working directory:", os.getcwd())
+    print("Looking for file:", DATA_PATH)
+    print("File exists:", os.path.exists(DATA_PATH))
+
+    return pd.read_csv(DATA_PATH)
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+DATA_PATH = BASE_DIR / "data" / "dataset.csv"
+
+def load_data():
+    return pd.read_csv(DATA_PATH)
+
 import pandas as pd
 import streamlit as st
 
