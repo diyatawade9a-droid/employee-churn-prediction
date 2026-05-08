@@ -3,9 +3,6 @@ import os
 import pandas as pd
 import streamlit as st
 
-st.title("My Streamlit App")
-st.write("Deployment successful!")
-
 DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "dataset.csv")
 
 ATTRITION_OPTIONS = ["Yes", "No"]
