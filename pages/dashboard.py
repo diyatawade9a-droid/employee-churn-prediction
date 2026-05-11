@@ -40,9 +40,3 @@ fig = px.histogram(df, x="Age", color="Attrition",
                    title="Age Distribution by Attrition")
 st.plotly_chart(fig, use_container_width=True)
 
-# Correlation heatmap
-numeric_df = df.select_dtypes(include=['int64', 'float64'])
-corr = numeric_df.corr()
-
-fig = px.imshow(corr, text_auto=True, title="Feature Correlation Heatmap")
-st.plotly_chart(fig, use_container_width=True)
